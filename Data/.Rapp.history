@@ -1,0 +1,13 @@
+load("/Users/dokkaebi/Desktop/MATH615/Data/health_clean.Rdata")
+ls()
+summary(data_object_name)
+head(age, bmi, insured, insured_cat, checkup, checkup_cat, income, income_cat,#
+    kno1, kno2, kno3, kno4, knowledge_sum, knowledge_mean,#
+    civ1, civ2, civ3, civ4, civ5, civic_sum, civic_mean))
+load("/Users/dokkaebi/Desktop/MATH615/Data/health_clean.Rdata")
+> head(age, bmi, insured, insured_cat, checkup, checkup_cat, income, income_cat,#
+   kno1, kno2, kno3, kno4, knowledge_sum, knowledge_mean,     civ1, civ2, civ3, civ4, civ5, civic_sum, civic_mean)
+> head(age, bmi, insured, insured_cat, checkup, checkup_cat, income, income_cat, kno1, kno2, kno3, kno4, knowledge_sum, knowledge_mean, civ1, civ2, civ3, civ4, civ5, civic_sum, civic_mean)
+load("/Users/dokkaebi/Desktop/MATH615/Data/health_clean.Rdata")
+ls()
+View(clean)
