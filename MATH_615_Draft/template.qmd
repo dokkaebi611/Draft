@@ -74,7 +74,7 @@ library(ggdist)
 library(sjPlot); 
 library(gtsummary)
 
-load(here::here("..", "Data", "UShealth_clean.Rdata"))
+load("~/Documents/GitHub/Draft/MATH_615_Draft/UShealth_clean.Rdata")
 
 sjPlot::plot_xtab(
   grp=clean$bp_cat, 
@@ -90,7 +90,7 @@ The bar chart illustrates the relationship between self-reported exercise effort
 As the graph shows, individuals who reported doing more exercise were less likely to have been diagnosed with high blood pressure. For example, among those who reported exercising “a great deal,” only 36.2% had high blood pressure, compared to 56.9% among those who did not exercise at all. This downward trend suggests that greater physical activity is associated with a lower likelihood of high blood pressure, supporting well-established evidence that regular exercise helps regulate blood pressure and improve cardiovascular health.
 
 ```{r}
-load(here::here("..", "Data", "health_clean.Rdata"))
+load("~/Documents/GitHub/Draft/MATH_615_Draft/health_clean.Rdata")
 
 sjPlot::plot_xtab(
   grp = dat_xtab$income_cat,
@@ -139,7 +139,6 @@ sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat,
 ```
 
 ```{r, fig.show='hide'}
-load(here::here("..", "Data", "health_clean.Rdata"))
 
 sjPlot::plot_xtab(
   grp = dat_xtab$income_cat,
