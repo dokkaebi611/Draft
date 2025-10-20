@@ -98,14 +98,7 @@ sjPlot::plot_xtab(
   show.total = FALSE,
   margin = "row",
   legend.title = ""
-) +
-  theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(
-    x = "Last Routine Check-Up",
-    y = "Row % of Income Level",
-    title = "Routine Checkup by Income Level"
-  )
+)
 
 ```
 
