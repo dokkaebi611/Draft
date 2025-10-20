@@ -1,6 +1,10 @@
 ---
-title: "Journal format to use as template"
-format: pdf
+title: "Association Between individual Health Management, Income, and Insurance Coverage in Preventive Healthcare Among U.S. Adults"
+format: 
+  pdf: 
+    keep-tex: true
+    fig-width: 6
+    fig-height: 4
 evaluate: 
   warning: false
   message: false
@@ -14,17 +18,26 @@ author:
        - name: California State University, Chico
          department: Data Science and Analytics
 abstract: |
-  This study examines two related questions using data from the 2016–2017 American Health Values Survey. The first investigates whether individuals who report putting greater effort into maintaining their health are less likely to have been diagnosed by a doctor with high blood pressure. The second explores the association between annual household income and the time since an individual’s last routine checkup. Using logistic and ordinal regression analyses, the findings suggest that higher self-reported health effort is associated with lower odds of a high blood pressure diagnosis, and that higher income predicts more recent medical checkups. These results highlight socioeconomic and behavioral disparities in health outcomes and access to preventive care.
+ This study examines two interrelated questions using data from the 2016–2017 American Health Values Survey (AHVS), a nationally representative dataset of U.S. adults collected by NORC at the University of Chicago. The first question investigates whether individuals who report putting greater effort into managing their personal health—through behaviors such as regular exercise, healthy eating, stress reduction, and routine medical engagement—are less likely to have been diagnosed by a doctor with high blood pressure. The second question explores how annual household income and insurance coverage are associated with the time since an individual’s last routine medical checkup, reflecting differences in access to preventive healthcare services across socioeconomic groups. 
+  
+ To address these questions, the analysis employs logistic regression to estimate the odds of receiving a high blood pressure diagnosis as a function of self-reported health management, and ordinal regression to model the relationship between household income, insurance status, and the recency of preventive medical visits. Results indicate that individuals who engage more actively in managing their health report significantly lower odds of having been diagnosed with high blood pressure, even after accounting for demographic factors. Similarly, adults with higher household incomes and health insurance coverage are substantially more likely to have had a recent routine checkup compared to lower-income or uninsured respondents.
+  
+ Overall, these findings highlight important behavioral and socioeconomic disparities in preventive health and chronic disease outcomes. The results suggest that both individual lifestyle management and structural access to care play critical roles in promoting better health and reducing inequalities within the U.S. healthcare system.
 keywords: [health effort, income, checkup]
-Bibliography: references.bib
+bibliography: references.bib
+link-citations: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Introduction and Background {#sec-intro}
 Preventive healthcare plays a critical role in early disease detection and reducing long-term health costs. Regular checkups, screenings, and healthy lifestyle behaviors help identify potential health risks before they become serious, ultimately improving quality of life and reducing the financial burden on individuals and the healthcare system. Despite these benefits, engagement in preventive health practices varies widely among Americans, reflecting differences in awareness, motivation, and access to care.
 
-To better understand patterns in Americans’ health, this study takes two complementary perspectives. The first focuses on individual effort to maintain or improve health, capturing personal behaviors such as exercise, healthy eating, and proactive health management. The second examines access to routine medical checkups influenced by income level, representing the structural and socioeconomic conditions that shape preventive healthcare utilization. Together, these perspectives provide a more holistic understanding of how both personal and contextual factors contribute to preventive health outcomes in the United States.
+To better understand patterns in Americans health, this study takes two complementary perspectives. The first focuses on individual effort to maintain or improve health, capturing personal behaviors such as exercise, healthy eating, and proactive health management. The second examines access to routine medical checkups influenced by income level, representing the structural and socioeconomic conditions that shape preventive healthcare utilization. Together, these perspectives provide a more holistic understanding of how both personal and contextual factors contribute to preventive health outcomes in the United States.
 
-Previous research shows that family income strongly influences access to medical care and preventive services. Adults with lower income levels face greater barriers to care, often forgoing medical visits or prescriptions due to cost, while even brief insurance disruptions reduce preventive services such as routine checkups. Building on this evidence, the present study investigates how socioeconoㅁmic factors—particularly annual household income—relate to both health effort and the time since one’s last routine checkup. By analyzing these relationships, this study seeks to highlight socioeconomic disparities in preventive healthcare among U.S. adults and contribute to a deeper understanding of the behavioral and structural determinants of health.
+Preventive healthcare plays a critical role in early disease detection and reducing long-term health costs . Regular checkups, screenings, and healthy lifestyle behaviors help identify potential health risks before they become serious, ultimately improving quality of life and reducing the financial burden on individuals and the healthcare system. Despite these benefits, engagement in preventive health practices varies widely among Americans, reflecting differences in awareness, motivation, and access to care. Research consistently shows that @wilcox2000 individuals who engage in consistent health-promoting behaviors, such as maintaining a balanced diet, exercising regularly, practicing stress management through meditation, and adhering to preventive medical routines, experience better long-term health outcomes. These include lower risks of chronic diseases such as hypertension, diabetes, and heart disease, as well as improved mental well-being and functional health throughout adulthood.
+
+Previous research @rentfrow2013 shows that family income strongly influences access to medical care and preventive services. Adults with lower income levels face greater barriers to care, often forgoing medical visits or prescriptions due to cost, while even brief insurance disruptions reduce preventive services such as routine checkups. Building on this evidence, the present study investigates how socioeconoㅁmic factors—particularly annual household income—relate to both health effort and the time since one’s last routine checkup. By analyzing these relationships, this study seeks to highlight socioeconomic disparities in preventive healthcare among U.S. adults and contribute to a deeper understanding of the behavioral and structural determinants of health.
  
 ## Study Design and Data collection {#sec-design}
 This study employs a cross-sectional observational design using data from the 2016–2017 American Health Values Survey, a nationally representative dataset of U.S. adults. The analysis focuses on respondents aged 18 and older who provided complete information on key variables, including self-reported effort in maintaining the health, blood pressure diagnosis, annual household income, and time since last routine medical checkup. Data were collected through structured survey questionnaires administered online and by phone, ensuring coverage across diverse demographic and socioeconomic groups. This design allows for examining associations between behavioral and socioeconomic factors and health outcomes without manipulating variables or establishing causality.
@@ -32,11 +45,12 @@ This study employs a cross-sectional observational design using data from the 20
 This study utilized a cross-sectional observational design drawing upon data from the 2016–2017 American Health Values Survey (AHVS), conducted by NORC at the University of Chicago with support from the Robert Wood Johnson Foundation. The AHVS is a nationally representative survey designed to assess the health beliefs, values, and behaviors of U.S. adults across diverse demographic and regional contexts. The analysis in this study was restricted to respondents aged 18 years and older who provided complete responses to key variables, including self-reported health effort, blood pressure diagnosis, annual household income, and time since last routine medical checkup.
 
 Data were collected using a multimode survey design, incorporating online (CAWI), mail (self-administered paper questionnaires), and telephone interviews (CATI). This mixed-method approach enhanced accessibility for respondents with varying levels of internet access and literacy, ensuring more comprehensive coverage across urban and rural populations. The survey was available in both English and Spanish, and participants received small prepaid and contingent incentives to improve response rates
-The AHVS and the related Sentinel Community Surveys collected detailed information on participants’ health values, personal health priorities, self-efficacy, access to care, and social determinants of health. The structured questionnaire captured both quantitative and categorical data, allowing for the examination of associations between behavioral, social, and economic factors and various health outcomes without any manipulation of variables. Because of its cross-sectional nature, this design allows for identifying correlations and group differences but does not infer causality.
+
+
+According to the AHVS and the related Sentinel Community Surveys collected detailed information on participants’ health values, personal health priorities, self-efficacy, access to care, and social determinants of health. The structured questionnaire captured both quantitative and categorical data, allowing for the examination of associations between behavioral, social, and economic factors and various health outcomes without any manipulation of variables. Because of its cross-sectional nature, this design allows for identifying correlations and group differences but does not infer causality.
 
 
 ## Methods 
-Use separate sub-sections for data preparation and statistical analysis methods. 
 
 #### Data Preparation {#sec-dataprep-methods}
   Data for this study were obtained from the 2016–2017 American Health Values Survey. The dataset was first cleaned and filtered to include only respondents aged 18 years and older to focus the analysis on adults. Observations with missing or incomplete responses for key analytical variables—specifically health effort, annual household income, and time since last routine medical checkup—were excluded to ensure data quality and consistency. This filtering process helped minimize bias that could result from incomplete information.
@@ -56,20 +70,43 @@ All data cleaning, transformation, and analyses were performed using R (version 
 
 ## Results {#sec-results}
 
+```{r, fig-exercise, fig.cap=" Relationship between exercise effort and high blood pressure diagnosis.", fig.align='center', out.width='70%', include=TRUE, fig.show='hold', echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse); library(ggdist)
+library(sjPlot); library(gtsummary)
+load(here::here("C:/MATH615/data/UShealth_clean.Rdata"))
+
+sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat, 
+                  show.total = FALSE, margin="row", legend.title="") 
+
+```
+The bar chart illustrates the relationship between self-reported exercise effort and whether respondents reported a diagnosis of high blood pressure. Each bar shows the percentage of respondents in each exercise category (“Not at all” to “A great deal”) who reported having or not having high blood pressure.
+
+As the graph shows, individuals who reported doing more exercise were less likely to have been diagnosed with high blood pressure. For example, among those who reported exercising “a great deal,” only 36.2% had high blood pressure, compared to 56.9% among those who did not exercise at all. This downward trend suggests that greater physical activity is associated with a lower likelihood of high blood pressure, supporting well-established evidence that regular exercise helps regulate blood pressure and improve cardiovascular health.
+
+```{r}
+
+
+
+```
+
 
 
 ## Discussion, Conclusion {#sec-discussino}
-Interpret your results, explain their meaning, and place them in context with existing knowledge.
+The results of this study reveal two key patterns linking behavioral and socioeconomic factors to preventive health outcomes among U.S. adults. First, individuals who reported putting greater effort into managing their personal health—through activities such as regular exercise, healthy eating, stress management, and proactive medical care—were significantly less likely to report a diagnosis of high blood pressure. This finding aligns with existing research demonstrating that consistent engagement in healthy behaviors helps regulate blood pressure, improve cardiovascular function, and reduce the risk of chronic disease. It reinforces the importance of self-care practices as an essential component of preventive healthcare, suggesting that promoting active health management could lead to improved long-term health outcomes and reduced healthcare costs.
 
-* Summarize the main findings and discuss their implications or applications.
-* Address limitations of the study and suggest directions for future research.
+Second, the analysis showed that household income and health insurance coverage were strong predictors of preventive healthcare utilization. Participants with higher income levels and stable insurance coverage were more likely to have received a recent routine medical checkup compared to those with lower income or no insurance. This pattern supports prior evidence that financial resources and access to care remain major determinants of preventive health engagement. The results highlight ongoing socioeconomic disparities in the U.S. healthcare system, where lower-income individuals may delay or forgo preventive visits due to cost, lack of coverage, or competing life demands.
 
-## References
-::: {#refs}
-:::
+Despite these meaningful insights, several limitations should be noted. The study’s cross-sectional design prevents establishing causal relationships between health effort, income, and health outcomes. The use of self-reported data may also introduce recall or social desirability bias, as individuals may overstate their healthy behaviors. Additionally, unmeasured factors such as education, neighborhood environment, or stress levels may influence both health behavior and outcomes.
+
+Future research should explore these relationships using longitudinal data to better understand how personal health management and socioeconomic conditions interact over time. Including more detailed measures of lifestyle behaviors, health literacy, and psychological well-being could further clarify the mechanisms linking preventive efforts and health outcomes. Such work would strengthen the evidence base for policies and interventions aimed at improving access to preventive care and promoting equitable health behaviors across income groups.
 
 
 ## Appendix
 
-All of the code used for this report should be included and executed here. Do not include extraneous code or output not directly relevant to the results reported in this research report. Use brief headers or sentences to connect the code to the sections in this report. 
+```{r, fig.show='hide'}
+sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat, 
+                  show.total = FALSE, margin="row", legend.title="") 
 
+```
+
+## References

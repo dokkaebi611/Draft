@@ -66,6 +66,46 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -175,7 +215,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Journal format to use as template},
+  pdftitle={Association Between individual Health Management, Income, and Insurance Coverage in Preventive Healthcare Among U.S. Adults},
   pdfauthor={Sandesh Manjunath Raykar; Daniel Lee},
   pdfkeywords={health effort, income, checkup},
   colorlinks=true,
@@ -186,24 +226,44 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{Journal format to use as template}
+\title{Association Between individual Health Management, Income, and
+Insurance Coverage in Preventive Healthcare Among U.S. Adults}
 \author{Sandesh Manjunath Raykar \and Daniel Lee}
 \date{}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-This study examines two related questions using data from the 2016--2017
-American Health Values Survey. The first investigates whether
-individuals who report putting greater effort into maintaining their
-health are less likely to have been diagnosed by a doctor with high
-blood pressure. The second explores the association between annual
-household income and the time since an individual's last routine
-checkup. Using logistic and ordinal regression analyses, the findings
-suggest that higher self-reported health effort is associated with lower
-odds of a high blood pressure diagnosis, and that higher income predicts
-more recent medical checkups. These results highlight socioeconomic and
-behavioral disparities in health outcomes and access to preventive care.
+This study examines two interrelated questions using data from the
+2016--2017 American Health Values Survey (AHVS), a nationally
+representative dataset of U.S. adults collected by NORC at the
+University of Chicago. The first question investigates whether
+individuals who report putting greater effort into managing their
+personal health---through behaviors such as regular exercise, healthy
+eating, stress reduction, and routine medical engagement---are less
+likely to have been diagnosed by a doctor with high blood pressure. The
+second question explores how annual household income and insurance
+coverage are associated with the time since an individual's last routine
+medical checkup, reflecting differences in access to preventive
+healthcare services across socioeconomic groups.
+
+To address these questions, the analysis employs logistic regression to
+estimate the odds of receiving a high blood pressure diagnosis as a
+function of self-reported health management, and ordinal regression to
+model the relationship between household income, insurance status, and
+the recency of preventive medical visits. Results indicate that
+individuals who engage more actively in managing their health report
+significantly lower odds of having been diagnosed with high blood
+pressure, even after accounting for demographic factors. Similarly,
+adults with higher household incomes and health insurance coverage are
+substantially more likely to have had a recent routine checkup compared
+to lower-income or uninsured respondents.
+
+Overall, these findings highlight important behavioral and socioeconomic
+disparities in preventive health and chronic disease outcomes. The
+results suggest that both individual lifestyle management and structural
+access to care play critical roles in promoting better health and
+reducing inequalities within the U.S. healthcare system.
 \end{abstract}
 
 
@@ -218,7 +278,7 @@ these benefits, engagement in preventive health practices varies widely
 among Americans, reflecting differences in awareness, motivation, and
 access to care.
 
-To better understand patterns in Americans' health, this study takes two
+To better understand patterns in Americans health, this study takes two
 complementary perspectives. The first focuses on individual effort to
 maintain or improve health, capturing personal behaviors such as
 exercise, healthy eating, and proactive health management. The second
@@ -228,17 +288,34 @@ preventive healthcare utilization. Together, these perspectives provide
 a more holistic understanding of how both personal and contextual
 factors contribute to preventive health outcomes in the United States.
 
-Previous research shows that family income strongly influences access to
-medical care and preventive services. Adults with lower income levels
-face greater barriers to care, often forgoing medical visits or
-prescriptions due to cost, while even brief insurance disruptions reduce
-preventive services such as routine checkups. Building on this evidence,
-the present study investigates how socioeconoㅁmic
-factors---particularly annual household income---relate to both health
-effort and the time since one's last routine checkup. By analyzing these
-relationships, this study seeks to highlight socioeconomic disparities
-in preventive healthcare among U.S. adults and contribute to a deeper
-understanding of the behavioral and structural determinants of health.
+Preventive healthcare plays a critical role in early disease detection
+and reducing long-term health costs . Regular checkups, screenings, and
+healthy lifestyle behaviors help identify potential health risks before
+they become serious, ultimately improving quality of life and reducing
+the financial burden on individuals and the healthcare system. Despite
+these benefits, engagement in preventive health practices varies widely
+among Americans, reflecting differences in awareness, motivation, and
+access to care. Research consistently shows that Wilcox et al.
+(\citeproc{ref-wilcox2000}{2000}) individuals who engage in consistent
+health-promoting behaviors, such as maintaining a balanced diet,
+exercising regularly, practicing stress management through meditation,
+and adhering to preventive medical routines, experience better long-term
+health outcomes. These include lower risks of chronic diseases such as
+hypertension, diabetes, and heart disease, as well as improved mental
+well-being and functional health throughout adulthood.
+
+Previous research Rentfrow et al. (\citeproc{ref-rentfrow2013}{2013})
+shows that family income strongly influences access to medical care and
+preventive services. Adults with lower income levels face greater
+barriers to care, often forgoing medical visits or prescriptions due to
+cost, while even brief insurance disruptions reduce preventive services
+such as routine checkups. Building on this evidence, the present study
+investigates how socioeconoㅁmic factors---particularly annual household
+income---relate to both health effort and the time since one's last
+routine checkup. By analyzing these relationships, this study seeks to
+highlight socioeconomic disparities in preventive healthcare among U.S.
+adults and contribute to a deeper understanding of the behavioral and
+structural determinants of health.
 
 \subsection{Study Design and Data collection}\label{sec-design}
 
@@ -273,7 +350,9 @@ accessibility for respondents with varying levels of internet access and
 literacy, ensuring more comprehensive coverage across urban and rural
 populations. The survey was available in both English and Spanish, and
 participants received small prepaid and contingent incentives to improve
-response rates The AHVS and the related Sentinel Community Surveys
+response rates
+
+According to the AHVS and the related Sentinel Community Surveys
 collected detailed information on participants' health values, personal
 health priorities, self-efficacy, access to care, and social
 determinants of health. The structured questionnaire captured both
@@ -284,9 +363,6 @@ of its cross-sectional nature, this design allows for identifying
 correlations and group differences but does not infer causality.
 
 \subsection{Methods}\label{methods}
-
-Use separate sub-sections for data preparation and statistical analysis
-methods.
 
 \paragraph{Data Preparation}\label{sec-dataprep-methods}
 
@@ -359,58 +435,107 @@ Statistical significance was set at p \textless{} 0.05.
 
 \subsection{Results}\label{sec-results}
 
-\subsubsection{Q \textasciitilde{} C Association: Income vs.~Usual Place
-for Care}\label{q-c-association-income-vs.-usual-place-for-care}
+\begin{figure}
 
-We examined how household income (numeric code) varies by usual place
-for care (\texttt{checkup\_cat}).\\
-Descriptive statistics are presented in \textbf{Table 1}, model
-estimates in \textbf{Table 2},\\
-and income distribution by care setting is illustrated in \textbf{Figure
-1}.
+\centering{
 
-\#\textbar{} label: tbl-qc-desc \#\textbar{} tbl-cap: ``Table 1. Income
-summary by usual place for care.'' \#\textbar{} echo: false \#\textbar{}
-message: false \#\textbar{} warning: false
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{template_files/figure-pdf/fig-exercise-1.pdf}
 
-library(dplyr) library(knitr)
+}
 
-qc\_desc \textless- clean \textbar\textgreater{} mutate(income\_num =
-as.numeric(income)) \textbar\textgreater{} group\_by(checkup\_cat)
-\textbar\textgreater{} summarise( n = sum(!is.na(income\_num)), mean =
-mean(income\_num, na.rm = TRUE), sd = sd(income\_num, na.rm = TRUE),
-median = median(income\_num, na.rm = TRUE), IQR = IQR(income\_num, na.rm
-= TRUE), .groups = ``drop'' )
+\caption{\label{fig-exercise}Relationship between exercise effort and
+high blood pressure diagnosis.}
 
-knitr::kable(qc\_desc, digits = c(0,0,2,2,2,2))
+\end{figure}%
+
+The bar chart illustrates the relationship between self-reported
+exercise effort and whether respondents reported a diagnosis of high
+blood pressure. Each bar shows the percentage of respondents in each
+exercise category (``Not at all'' to ``A great deal'') who reported
+having or not having high blood pressure.
+
+As the graph shows, individuals who reported doing more exercise were
+less likely to have been diagnosed with high blood pressure. For
+example, among those who reported exercising ``a great deal,'' only
+36.2\% had high blood pressure, compared to 56.9\% among those who did
+not exercise at all. This downward trend suggests that greater physical
+activity is associated with a lower likelihood of high blood pressure,
+supporting well-established evidence that regular exercise helps
+regulate blood pressure and improve cardiovascular health.
 
 \subsection{Discussion, Conclusion}\label{sec-discussino}
 
-Interpret your results, explain their meaning, and place them in context
-with existing knowledge.
+The results of this study reveal two key patterns linking behavioral and
+socioeconomic factors to preventive health outcomes among U.S. adults.
+First, individuals who reported putting greater effort into managing
+their personal health---through activities such as regular exercise,
+healthy eating, stress management, and proactive medical care---were
+significantly less likely to report a diagnosis of high blood pressure.
+This finding aligns with existing research demonstrating that consistent
+engagement in healthy behaviors helps regulate blood pressure, improve
+cardiovascular function, and reduce the risk of chronic disease. It
+reinforces the importance of self-care practices as an essential
+component of preventive healthcare, suggesting that promoting active
+health management could lead to improved long-term health outcomes and
+reduced healthcare costs.
 
-\begin{itemize}
-\tightlist
-\item
-  Summarize the main findings and discuss their implications or
-  applications.
-\item
-  Address limitations of the study and suggest directions for future
-  research.
-\end{itemize}
+Second, the analysis showed that household income and health insurance
+coverage were strong predictors of preventive healthcare utilization.
+Participants with higher income levels and stable insurance coverage
+were more likely to have received a recent routine medical checkup
+compared to those with lower income or no insurance. This pattern
+supports prior evidence that financial resources and access to care
+remain major determinants of preventive health engagement. The results
+highlight ongoing socioeconomic disparities in the U.S. healthcare
+system, where lower-income individuals may delay or forgo preventive
+visits due to cost, lack of coverage, or competing life demands.
 
-\subsection{References}\label{references}
+Despite these meaningful insights, several limitations should be noted.
+The study's cross-sectional design prevents establishing causal
+relationships between health effort, income, and health outcomes. The
+use of self-reported data may also introduce recall or social
+desirability bias, as individuals may overstate their healthy behaviors.
+Additionally, unmeasured factors such as education, neighborhood
+environment, or stress levels may influence both health behavior and
+outcomes.
 
-\phantomsection\label{refs}
-\begin{CSLReferences}{0}{1}
-\end{CSLReferences}
+Future research should explore these relationships using longitudinal
+data to better understand how personal health management and
+socioeconomic conditions interact over time. Including more detailed
+measures of lifestyle behaviors, health literacy, and psychological
+well-being could further clarify the mechanisms linking preventive
+efforts and health outcomes. Such work would strengthen the evidence
+base for policies and interventions aimed at improving access to
+preventive care and promoting equitable health behaviors across income
+groups.
 
 \subsection{Appendix}\label{appendix}
 
-All of the code used for this report should be included and executed
-here. Do not include extraneous code or output not directly relevant to
-the results reported in this research report. Use brief headers or
-sentences to connect the code to the sections in this report.
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sjPlot}\SpecialCharTok{::}\FunctionTok{plot\_xtab}\NormalTok{(}\AttributeTok{grp=}\NormalTok{clean}\SpecialCharTok{$}\NormalTok{bp\_cat, }\AttributeTok{x=}\NormalTok{clean}\SpecialCharTok{$}\NormalTok{exercise\_cat, }
+                  \AttributeTok{show.total =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{margin=}\StringTok{"row"}\NormalTok{, }\AttributeTok{legend.title=}\StringTok{""}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\subsection*{References}\label{references}
+\addcontentsline{toc}{subsection}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-rentfrow2013}
+Rentfrow, P. J., S. D. Gosling, M. Jokela, D. J. Stillwell, M. Kosinski,
+and J. Potter. 2013. {``Divided We Stand: Three Psychological Regions of
+the United States and Their Correlates.''} \emph{Journal of Personality
+and Social Psychology} 105 (6): 996--1012.
+
+\bibitem[\citeproctext]{ref-wilcox2000}
+Wilcox, S., C. Castro, A. C. King, R. Housemann, and R. C. Brownson.
+2000. {``Determinants of Leisure-Time Physical Activity in Rural Vs.
+Urban Older Women.''} \emph{Journal of Epidemiology \& Community Health}
+54 (9): 667--72.
+
+\end{CSLReferences}
 
 
 
