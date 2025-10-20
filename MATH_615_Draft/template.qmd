@@ -109,6 +109,8 @@ sjPlot::plot_xtab(
 
 ```
 
+The bar chart illustrates the relationship between household income and the recency of respondents’ last routine medical checkup. Individuals with higher income levels were more likely to have had a recent checkup, while those with lower incomes showed longer gaps or no checkups at all. This pattern indicates that higher-income adults have greater access to preventive healthcare, highlighting persistent socioeconomic disparities in medical care utilization.
+
 ## Discussion, Conclusion {#sec-discussino}
 
 The results of this study reveal two key patterns linking behavioral and socioeconomic factors to preventive health outcomes among U.S. adults. First, individuals who reported putting greater effort into managing their personal health—through activities such as regular exercise, healthy eating, stress management, and proactive medical care—were significantly less likely to report a diagnosis of high blood pressure. This finding aligns with existing research demonstrating that consistent engagement in healthy behaviors helps regulate blood pressure, improve cardiovascular function, and reduce the risk of chronic disease. It reinforces the importance of self-care practices as an essential component of preventive healthcare, suggesting that promoting active health management could lead to improved long-term health outcomes and reduced healthcare costs.
@@ -124,6 +126,7 @@ Future research should explore these relationships using longitudinal data to be
 In conclusion, the findings underscore that both behavioral commitment and socioeconomic stability are crucial to preventive healthcare engagement. Encouraging active self-management while addressing financial and structural barriers to care could help close the gap in preventive service utilization, ultimately leading to a healthier and more equitable population.
 
 ## References
+
 ::: {#refs}
 :::
 
