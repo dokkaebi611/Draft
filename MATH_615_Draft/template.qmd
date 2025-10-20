@@ -116,6 +116,10 @@ Future research should explore these relationships using longitudinal data to be
 
 In conclusion, the findings underscore that both behavioral commitment and socioeconomic stability are crucial to preventive healthcare engagement. Encouraging active self-management while addressing financial and structural barriers to care could help close the gap in preventive service utilization, ultimately leading to a healthier and more equitable population.
 
+## References
+::: {#refs}
+:::
+
 ## Appendix
 
 ```{r, fig.show='hide'}
@@ -123,7 +127,6 @@ sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat,
                   show.total = FALSE, margin="row", legend.title="") 
 
 ```
-
 
 ```{r, fig.show='hide'}
 load(here::here("..", "Data", "health_clean.Rdata"))
@@ -144,4 +147,3 @@ sjPlot::plot_xtab(
   )
 
 ```
-## References
