@@ -69,12 +69,19 @@ For the present analysis using the cleaned AHVS dataset, descriptive statistics 
 ## Results {#sec-results}
 
 ```{r, fig-exercise, fig.cap=" Relationship between exercise effort and high blood pressure diagnosis.", fig.align='center', out.width='70%', include=TRUE, fig.show='hold', echo=FALSE, warning=FALSE, message=FALSE}
-library(tidyverse); library(ggdist)
-library(sjPlot); library(gtsummary)
+library(tidyverse); 
+library(ggdist)
+library(sjPlot); 
+library(gtsummary)
+
 load(here::here("..", "Data", "UShealth_clean.Rdata"))
 
-sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat, 
-                  show.total = FALSE, margin="row", legend.title="") 
+sjPlot::plot_xtab(
+  grp=clean$bp_cat, 
+  x=clean$exercise_cat,
+  show.total = FALSE,
+  margin="row",
+  legend.title="") 
 
 ```
 
