@@ -108,9 +108,13 @@ The results of this study reveal two key patterns linking behavioral and socioec
 
 Second, the analysis showed that household income and health insurance coverage were strong predictors of preventive healthcare utilization. Participants with higher income levels and stable insurance coverage were more likely to have received a recent routine medical checkup compared to those with lower income or no insurance. This pattern supports prior evidence that financial resources and access to care remain major determinants of preventive health engagement. The results highlight ongoing socioeconomic disparities in the U.S. healthcare system, where lower-income individuals may delay or forgo preventive visits due to cost, lack of coverage, or competing life demands.
 
+Building on these findings, the analysis of routine checkup frequency by income level further illustrates this disparity. Individuals in lower income brackets showed smaller proportions of having had a checkup within the past year, whereas those in higher income brackets were more likely to have undergone a recent checkup. Notably, the “Never” category contained only respondents from middle-income groups, suggesting that preventive care avoidance may be tied to affordability and prioritization rather than complete neglect of healthcare. This gradient emphasizes how financial capability directly affects one’s likelihood of engaging in preventive medical visits—a pattern consistent with previous studies on healthcare access inequities.
+
 Despite these meaningful insights, several limitations should be noted. The study’s cross-sectional design prevents establishing causal relationships between health effort, income, and health outcomes. The use of self-reported data may also introduce recall or social desirability bias, as individuals may overstate their healthy behaviors. Additionally, unmeasured factors such as education, neighborhood environment, or stress levels may influence both health behavior and outcomes.
 
 Future research should explore these relationships using longitudinal data to better understand how personal health management and socioeconomic conditions interact over time. Including more detailed measures of lifestyle behaviors, health literacy, and psychological well-being could further clarify the mechanisms linking preventive efforts and health outcomes. Such work would strengthen the evidence base for policies and interventions aimed at improving access to preventive care and promoting equitable health behaviors across income groups.
+
+In conclusion, the findings underscore that both behavioral commitment and socioeconomic stability are crucial to preventive healthcare engagement. Encouraging active self-management while addressing financial and structural barriers to care could help close the gap in preventive service utilization, ultimately leading to a healthier and more equitable population.
 
 ## Appendix
 
@@ -120,4 +124,24 @@ sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat,
 
 ```
 
+
+```{r, fig.show='hide'}
+load(here::here("..", "Data", "health_clean.Rdata"))
+
+sjPlot::plot_xtab(
+  grp = dat_xtab$income_cat,
+  x   = dat_xtab$checkup_cat,
+  show.total = FALSE,
+  margin = "row",
+  legend.title = ""
+) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  labs(
+    x = "Last Routine Check-Up",
+    y = "Row % of Income Level",
+    title = "Routine Checkup by Income Level"
+  )
+
+```
 ## References
