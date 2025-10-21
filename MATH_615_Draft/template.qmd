@@ -93,8 +93,8 @@ As the graph shows, individuals who reported doing more exercise were less likel
 load("~/Documents/GitHub/Draft/MATH_615_Draft/health_clean.Rdata")
 
 sjPlot::plot_xtab(
-  grp = dat_xtab$income_cat,
-  x   = dat_xtab$checkup_cat,
+  grp = clean$income_cat,
+  x   = clean$checkup_cat,
   show.total = FALSE,
   margin = "row",
   legend.title = ""
@@ -132,20 +132,12 @@ sjPlot::plot_xtab(grp=clean$bp_cat, x=clean$exercise_cat,
 ```
 
 ```{r, fig.show='hide'}
-
 sjPlot::plot_xtab(
-  grp = dat_xtab$income_cat,
-  x   = dat_xtab$checkup_cat,
+  grp = clean$income_cat,
+  x   = clean$checkup_cat,
   show.total = FALSE,
   margin = "row",
   legend.title = ""
-) +
-  theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(
-    x = "Last Routine Check-Up",
-    y = "Row % of Income Level",
-    title = "Routine Checkup by Income Level"
-  )
+)
 
 ```
